@@ -58,7 +58,7 @@ class LoadBalancing:
         # Add the connection to the dictionary with the selected server
         self.connections[connection_id] = server
         # Add the connection to the server
-        server.connections[connection_id] = True
+        server.add_connection(connection_id)
 
     def close_connection(self, connection_id):
         """Closes the connection on the the server corresponding to connection_id."""
